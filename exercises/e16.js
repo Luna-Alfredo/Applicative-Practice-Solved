@@ -10,8 +10,13 @@
 
 
 export function find(array, callback) {
-  // Your code goes here...
-  
+  let returnedArray = [];
+  for (let element of array) {
+    if (callback(element)) {
+      returnedArray.push(element);
+    }
+  }
+  return returnedArray[0];
 }
 
 
